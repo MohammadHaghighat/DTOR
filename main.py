@@ -24,19 +24,21 @@ from sklearn.svm import OneClassSVM
 from sklearn.mixture import GaussianMixture
 from sklearn.model_selection import train_test_split
 import matplotlib
+import warnings
 
+warnings.simplefilter("ignore", category=UserWarning)
 # Set permissions and backend
 os.umask(0o02)
 matplotlib.use('agg')
 
 # List of datasets
 lst_datasets = [
-    '/glass+identification/',
-    '/ionosphere/',
-    '/lymphography/',
-    '/musk+version+2/',
-    '/breast+cancer+wisconsin+diagnostic/',
-    '/arrhythmia/'
+    '/content/glass+identification/',
+    '/content/ionosphere/',
+    '/content/lymphography/',
+    '/content/musk+version+2/',
+    '/content/breast+cancer+wisconsin+diagnostic/',
+    '/content/arrhythmia/'
 ]
 
 # Loop through datasets
