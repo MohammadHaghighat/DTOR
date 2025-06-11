@@ -38,7 +38,6 @@ lst_datasets = [
     '/content/ionosphere/',
     '/content/lymphography/',
     '/content/breast+cancer+wisconsin+diagnostic/',
-    '/content/arrhythmia/'
 ]
 
 # Loop through datasets
@@ -271,6 +270,7 @@ for str_model in ['if', 'gmm', 'svm']:
                     df_table_final.loc[(str_model, metric), (dataset, str_surrogate)]
 
 # Save consolidated result table
+print("---done---")
 df_table_final_reformat.to_csv('/'.join(lst_datasets[0].split('/')[:-2]) + '/result_table' + '.csv')
 df_table_final_reformat.to_html('/'.join(lst_datasets[0].split('/')[:-2]) + '/result_table' + '.html')
 print(df_table_final_reformat)
