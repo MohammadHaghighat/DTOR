@@ -44,7 +44,7 @@ lst_datasets = [
 
 # Loop through datasets
 for main_path in lst_datasets:
-    print(main_path)
+    print("Dataset:",main_path)
     # Load dataset
     dtf = pd.read_csv(main_path + "data.data", header=None, index_col=None).reset_index(drop=True)
     if dtf.shape[0] == dtf[0].nunique():
