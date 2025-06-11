@@ -15,6 +15,12 @@
 import numpy as np
 import pandas as pd
 import os
+import warnings
+
+warnings.simplefilter("ignore", category=UserWarning)
+# Set permissions and backend
+os.umask(0o02)
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # 0 = all logs, 1 = filter INFO, 2 = filter WARNING, 3 = filter ERROR
 import time
 from dtor import DTOR
 from alibi.explainers.anchors.anchor_tabular import AnchorTabular
@@ -24,11 +30,6 @@ from sklearn.svm import OneClassSVM
 from sklearn.mixture import GaussianMixture
 from sklearn.model_selection import train_test_split
 import matplotlib
-import warnings
-
-warnings.simplefilter("ignore", category=UserWarning)
-# Set permissions and backend
-os.umask(0o02)
 matplotlib.use('agg')
 
 # List of datasets
