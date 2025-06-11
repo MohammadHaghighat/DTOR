@@ -37,7 +37,6 @@ lst_datasets = [
     '/content/glass+identification/',
     '/content/ionosphere/',
     '/content/lymphography/',
-    '/content/musk+version+2/',
     '/content/breast+cancer+wisconsin+diagnostic/',
     '/content/arrhythmia/'
 ]
